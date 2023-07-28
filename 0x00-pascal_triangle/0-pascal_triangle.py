@@ -5,7 +5,14 @@ alx interview
 
 
 def pascal_triangle(n):
-    res = [[1]]
+    '''
+    returns a two dimensional array of integers
+    '''
+
+    res = []
+    if n <= 0:
+        return res
+    res.append([1])
     for i in range(n - 1):
         row = []
         temp = [0] + res[-1] + [0]
