@@ -7,7 +7,7 @@ def minOperations(n: int) -> int:
     divisor: int = 2
     operations: int = 0
 
-    if (n <= 0):
+    if (n <= 1):
         return 0
 
     while (n > 1):
