@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''Finding minimum operations for copy all and paste operations'''
 
 
