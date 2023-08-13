@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""ALX SE"""
+"""Finding minimum operations of getting exactly n characters"""
 
 
 def minOperations(n: int) -> int:
-    """Return the minimum number of operations to complete a task"""
+    """Returns the minimum number of operations to complete a task"""
     if n <= 1:
         return 0
 
@@ -11,9 +11,8 @@ def minOperations(n: int) -> int:
     operations = 0
 
     while (n > 1):
-        if n % divisor == 0:
+        while (n % divisori== 0):
             n //= divisor
             operations += divisor
-        else:
-            divisor += 1
+        divisor += 1
     return operations
