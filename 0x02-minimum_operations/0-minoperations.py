@@ -4,17 +4,17 @@
 
 def minOperations(n):
     '''given n number of items'''
+    divisor = 2
+    operations = 0
+
     if n <= 0:
         return 0
-    elif n % 3 == 0:
-        res = n // 3
-        return 3 + res
-    elif n % 2 == 0:
-        if n == 2:
-            return n
-        elif n == 4:
-            return n
-        else:
-            return (2 + (n / 2))
-    else:
-        return n
+
+    while (n > 1):
+        while(n % divisor == 0):
+            operations += divisor
+            n //= divisor
+        divisor += 1
+    return operations
+
+    
