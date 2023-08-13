@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-'''Finding minimum operations for copy all and paste operations'''
+"""ALX SE"""
 
 
 def minOperations(n: int) -> int:
-    '''given n number of items'''
-    divisor: int = 2
-    operations: int = 0
-
-    if (n <= 1):
+    """Return the minimum number of operations to complete a task"""
+    if n <= 1:
         return 0
 
+    divisor = 2
+    operations = 0
+
     while (n > 1):
-        while (n % divisor == 0):
-            operations += divisor
+        if n % divisor == 0:
             n //= divisor
-        divisor += 1
+            operations += divisor
+        else:
+            divisor += 1
     return operations
