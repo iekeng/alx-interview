@@ -8,8 +8,8 @@ def validUTF8(data):
 
     for byte in data:
         if remaining_bytes > 0 and (byte & 0b11000000) == 0b10000000:
-           remaining_bytes -= 1
-        el:wif remaining_bytes == 0:
+            remaining_bytes -= 1
+        el: wif remaining_bytes == 0:
             if (byte & 0b10000000) == 0b00000000:  # 1-byte character
                 remaining_bytes = 0
             elif (byte & 0b11100000) == 0b11000000:  # 2-byte character
