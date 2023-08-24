@@ -1,7 +1,13 @@
+#!/usr/bin/python3
+'''0-validate_utf8'''
+
+
 def validUTF8(data):
-    # Variable to keep track of the number of remaining bytes for the current character
+    '''validates data'''
+    # Variable to keep track of the number of remaining bytes for the current
+    # character
     remaining_bytes = 0
-    
+
     for byte in data:
         # Check if this byte is a continuation byte (starts with 10xxxxxx)
         if remaining_bytes > 0 and (byte & 0xC0) == 0x80:
@@ -22,7 +28,6 @@ def validUTF8(data):
         else:
             # Invalid continuation byte
             return False
-    
+
     # All bytes have been processed and validated
     return remaining_bytes == 0
-
