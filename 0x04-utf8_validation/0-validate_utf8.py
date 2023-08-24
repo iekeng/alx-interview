@@ -5,7 +5,7 @@
 def validUTF8(data):
     '''validates data'''
     remaining_bytes = 0
-    
+
     for byte in data:
         if remaining_bytes > 0 and (byte & 0b11000000) == 0b10000000:
             remaining_bytes -= 1
@@ -24,5 +24,5 @@ def validUTF8(data):
         else:
             # Invalid continuation byte
             return False
-    
+
     return remaining_bytes == 0
