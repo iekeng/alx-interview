@@ -3,6 +3,12 @@
 
 
 def makeChange(coins, total):
+    """ This is an alx interview challenge
+        Args:
+        -coins
+        -total
+        Calculates the minimum amount of coins required to make change
+    """
     coins.sort()
     amount = 0
 
