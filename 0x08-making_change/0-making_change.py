@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+'''making_change'''
+
+
 def makeChange(coins, total):
     coins.sort()
     amount = 0
