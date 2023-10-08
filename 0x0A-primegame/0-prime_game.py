@@ -1,18 +1,20 @@
 #!/usr/bin/python3
+""" Prime Game
 """
-"""
+
+
 def prime_num(start, end):
-    """ Select and return prime numbers from 
-        the list of consecutive numbers between 
+    """ Select and return prime numbers from
+        the list of consecutive numbers between
         1 and number
     """
     prime_nums = []
 
     for num in range(start, end + 1):
-        
+
         is_prime = True
-        
-        for i in range(2, int(num**0.5)+1):
+
+        for i in range(2, int(num**0.5) + 1):
             if num % i == 0:
                 is_prime = False
 
@@ -20,9 +22,10 @@ def prime_num(start, end):
             prime_nums.append(num)
 
     return prime_nums
-        
+
+
 def isWinner(x, nums):
-    """ this function determines the winner of 
+    """ this function determines the winner of
         the prime game between maria and ben
     """
     maria_score = 0
@@ -41,7 +44,3 @@ def isWinner(x, nums):
         return 'Maria'
     else:
         return 'Ben'
-
-
-
-
