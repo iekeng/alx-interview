@@ -31,9 +31,9 @@ def isWinner(x, nums):
     maria_score = 0
     ben_score = 0
 
-    if not x or not nums:
+    if not x or not nums or len(nums) != x:
         return None
-
+    
     for rounds in range(x):
         result = prime_num(1, nums[rounds])
         if len(result) % 2 == 0:
